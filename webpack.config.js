@@ -2,9 +2,13 @@ const path = require('path');
 
 module.exports = {
   entry: './src/index.js',
-
+  mode: 'none',
   output: {
     path: path.resolve('dist'),
-    filename: 'bundle.js'
+    filename: 'main.js'
+  },
+
+  optimization: {
+    runtimeChunk: 'single'
   }
 };
