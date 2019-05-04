@@ -2,6 +2,16 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'https://yapi-demo.herokuapp.com/mock/16',
+        changeOrigin: true,
+        pathRewrite: { '^/api': '' },
+        toProxy: true
+      }
+    }
+  },
   module: {
     rules: [
       {
