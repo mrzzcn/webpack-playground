@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack",
-    "build:dev": "webpack --mode development ./src/index.js --output ./dist/foo/main.js --module-bind js=babel-loader",
-    "build": "webpack --mode production ./src/index.js --output ./dist/bar/main.js --module-bind js=babel-loader"
+    "build:dev": "webpack --mode development",
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +15,12 @@
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"
   }

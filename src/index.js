@@ -1,3 +1,5 @@
+import App from './App.jsx';
+
 console.log('Hello Webpack', process.env.NODE_ENV);
 
 const arr = [1, 2, 3];
