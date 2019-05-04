@@ -6,15 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack",
-    "build:dev": "webpack --mode development ./src/index.js --output ./dist/foo/main.js",
-    "build": "webpack --mode production ./src/index.js --output ./dist/bar/main.js"
+    "build:dev": "webpack --mode development ./src/index.js --output ./dist/foo/main.js --module-bind js=babel-loader",
+    "build": "webpack --mode production ./src/index.js --output ./dist/bar/main.js --module-bind js=babel-loader"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
     "babel-loader": "^8.0.5",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"
