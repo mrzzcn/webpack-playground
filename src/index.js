@@ -1,9 +1,11 @@
-import App from './App.jsx';
+// import App from './App.jsx';
 
-console.log('Hello Webpack', process.env.NODE_ENV);
+import Vue from 'vue';
 
-const arr = [1, 2, 3];
-const iAmJavascriptES6 = () => console.log(...arr);
-window.iAmJavascriptES6 = iAmJavascriptES6;
-
-console.log(iAmJavascriptES6());
+const app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  },
+  template: `<div>{{message}}</div>`
+});
